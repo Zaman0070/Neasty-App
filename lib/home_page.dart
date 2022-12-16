@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
               text: '3D Scan',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500,color: Colors.black),
               children: [
                 TextSpan(
-                  text: 'ready',style: TextStyle(fontWeight: FontWeight.w900)
+                  text: ' ready',style: TextStyle(fontWeight: FontWeight.w900)
                 ),
               ]
             )),

@@ -28,7 +28,7 @@ class _FavoriteState extends State<Favorite> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(left: 20.0,top: 20,bottom: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -163,71 +163,74 @@ class _FavoriteState extends State<Favorite> {
               ),),
             ),
             Spacer(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: 30,
-                  width: 120,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        CircleAvatar(
-                          radius: 7,
-                          backgroundColor: Colors.greenAccent.shade400,
-                        ),
-                        CircleAvatar(
-                          radius: 7,
-                          backgroundColor: Colors.greenAccent.shade200,
-                        ),
-                       const CircleAvatar(
-                          radius: 7,
-                          backgroundColor: Colors.black,
-                        ),
-                       const CircleAvatar(
-                          radius: 7,
-                          backgroundColor: Colors.white,
-                        ),
-                      ],
+            Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 30,
+                    width: 120,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                  ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          color: Colors.white
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CircleAvatar(
+                            radius: 7,
+                            backgroundColor: Colors.greenAccent.shade400,
+                          ),
+                          CircleAvatar(
+                            radius: 7,
+                            backgroundColor: Colors.greenAccent.shade200,
+                          ),
+                         const CircleAvatar(
+                            radius: 7,
+                            backgroundColor: Colors.black,
+                          ),
+                         const CircleAvatar(
+                            radius: 7,
+                            backgroundColor: Colors.white,
+                          ),
+                        ],
                       ),
-                      child: Icon(Icons.arrow_back),
                     ),
-                    SizedBox(width: 6,),
-                    InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (_)=>Favorite()));
-                      },
-                      child: Container(
-                        height: 70,
-                        width: 110,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: 60,
+                        width: 60,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(25),
-                            color: Colors.black
+                            color: Colors.white
                         ),
-                        child:const Icon(Icons.check,color: Colors.white,),
+                        child: Icon(Icons.arrow_back),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                      SizedBox(width: 6,),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=>Favorite()));
+                        },
+                        child: Container(
+                          height: 70,
+                          width: 110,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              color: Colors.black
+                          ),
+                          child:const Icon(Icons.check,color: Colors.white,),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 25,),
           ],
